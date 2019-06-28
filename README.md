@@ -11,3 +11,15 @@ Start by downloading the project template for the workshop from GitHub:
 https://github.com/speedacm/mAkeCM-WebApplicationWorkshop 
 
 If you’re unfamiliar with GitHub, follow the link above and click on the “Clone or download” button, then choose “Download ZIP”.  Once your download is complete, extract the contents anywhere on your computer.
+
+Open the folder `/my-portfolio` in your preferred code editor.  (Visual Studio Code is recommended, so instructions will be written assuming that's the code editor you're using.  If you're not using Visual Studio Code, then it's expected you're familiar enough with your system to perform equivalent actions.)  Now that the project is open, press `` Ctrl+` `` to open the terminal.
+
+Install the Angular CLI using the terminal:
+
+    npm install -g @angular/cli
+
+Test the template by serving the application from the terminal:
+
+    ng serve
+
+Navigate to `http://localhost:4200/` in your preferred web browser to see your web application come to life!
