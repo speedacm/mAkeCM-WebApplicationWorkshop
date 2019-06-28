@@ -7,6 +7,7 @@ You should have a basic knowledge of programming and navigating the command line
 **Visual Studio Code** (https://code.visualstudio.com/Download)
  - [ ] (*optional*) **Git** (https://git-scm.com/download/)
 ## Getting Started
-Start by downloading the project template for the workshop from GitHub: https://github.com/speedacm/mAkeCM-WebApplicationWorkshop 
+Start by downloading the project template for the workshop from GitHub:  
+https://github.com/speedacm/mAkeCM-WebApplicationWorkshop 
 
 If you’re unfamiliar with GitHub, follow the link above and click on the “Clone or download” button, then choose “Download ZIP”.  Once your download is complete, extract the contents anywhere on your computer.
