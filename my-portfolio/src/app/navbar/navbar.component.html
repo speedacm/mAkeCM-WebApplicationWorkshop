@@ -1,0 +1,17 @@
+<div class="navbar-push">
+    <div class="container">
+        <a [routerLink]="['/']">
+            <img class="portrait" src="/assets/portrait.jpg" />
+            Brent Rambo
+        </a>
+    </div>
+</div>
+<div class="navbar">
+    <div class="container">
+        <ul class="navlist">
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/projects']">projects</a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/contact']">contact</a></li>
+            <li [routerLinkActive]="['active']"><a [routerLink]="['/about']">about</a></li>
+        </ul>
+    </div>
+</div>

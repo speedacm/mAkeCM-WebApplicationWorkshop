@@ -1,0 +1,92 @@
+$navcolor: #894aff;
+
+.navbar-push {
+    width: 100%;
+    height: 4rem;
+    background: $navcolor;
+    color: white;
+
+    a {
+        position: relative;
+        z-index: 1;
+        
+        text-decoration: none;
+
+        font-size: 3rem;
+        font-family: 'Dawning of a New Day';
+        color: inherit;
+
+        .portrait {
+            float: left;
+            border-radius: 1.5rem;
+            height: 8rem;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.navbar {
+    width: 100%;
+    height: 4rem;
+    background: $navcolor;
+    color: #ddd;
+    
+    position: sticky;
+    top: 0;
+
+    .container {
+        height: 100%;
+    }
+
+    .navlist {
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+
+        list-style: none;
+        margin: 0;
+
+        li {
+            display: block;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 1em;
+                height: 0.4em;
+                width: calc(100% - 2em);
+                transform-origin: center;
+                transform: scaleX(0);
+                background-color: #fff;
+                transition: transform 250ms;
+                border-radius: 0.2em 0.2em 0 0;
+            }
+
+            &:hover {
+                color: #fff;
+
+                &::after {
+                    transform: scaleX(1);
+                }
+            }
+
+            &.active::after {
+                transform: scaleX(1);
+            }
+
+            a {
+                position: relative;
+                top: 50%;
+                padding: 0 0.5em;
+                transform: translateY(-50%);
+                text-decoration: none;
+                color: inherit;
+                display: block;
+                font-size: 2rem;
+                font-family: 'Comic Sans MS', cursive;
+            }
+        }        
+    }
+}

@@ -3,3 +3,12 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+}
+
+.container {
+    margin: auto;
+    max-width: 1280px;
+}
