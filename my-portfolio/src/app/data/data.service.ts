@@ -22,7 +22,7 @@ export class DataService {
 
   // Adds a Rating to the API
   public addRating(id: number, rating: Rating): Observable<object> {
-    return this.http.post(api.baseUrl + api.addRating(id), this.options)
+    return this.http.post(api.baseUrl + api.addRating(id), rating, this.options)
       .pipe(
         catchError(this.handleError)
       );
