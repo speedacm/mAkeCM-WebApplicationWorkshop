@@ -13,7 +13,7 @@ Additionally, we would like users to be able to add their own rating for the pro
 
 
 ## Intro to Markup
-[/src/app/projects/projects.component.html](src/app/projects.component.html)
+[/src/app/projects/projects.component.html](/src/app/projects.component.html)
 
 Markup defines the structure and content of a web application.  The most common markup language is HTML.  HTML is a great tool, but many front-end application frameworks extend it and add their own syntax.  In this project, we are using a popular front-end framework made by Google known as Angular.  Angular, like its peers, aims to reduce the amount of code needed to develop rich client-side applications.  Angular accomplishes this by providing tools to run a single-page application with quick and easy data-bindings between markup and logic.
 
