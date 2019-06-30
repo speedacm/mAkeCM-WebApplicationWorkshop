@@ -8,6 +8,7 @@ import { DataService, Project, Rating } from '../data/data.service';
 })
 export class ProjectsComponent implements OnInit {
 
+  userRatings: { [projectId: number]: Rating } = {};
   projects: Project[];
 
   constructor(public data: DataService) { }
@@ -30,6 +31,23 @@ export class ProjectsComponent implements OnInit {
       total += rating.value;
     }
     return count > 0 ? total / count : undefined;
+  }
+
+  submitRating(projectId: number): void {
+    if (this.userRatings[projectId].value)
+    {
+      if (!this.userRatings[projectId].comment)
+      {
+        this.userRatings[projectId].comment = null;
+      }
+
+      this.data.addRating(projectId, this.userRatings[projectId]).subscribe(
+        () => {
+          this.userRatings[projectId] = undefined;
+          this.updateProjects();
+        }
+      );
+    }
   }
 
 }

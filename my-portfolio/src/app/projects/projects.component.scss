@@ -34,16 +34,58 @@
             }
         }
     }
+
+    .new-rating {
+
+        button {
+            background: #894aff;
+            padding: 0.5em;
+            border: none;
+            border-radius: 0.25em;
+            color: #fff;
+            font-size: 1.25em;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #692acc;
+            }
+        }
+
+        .user-rating {
+            display: flex;
+
+            textarea {
+                flex-grow: 1;
+                margin: 0.5em;
+                resize: vertical;
+                min-height: 3em;
+
+                font-family: sans-serif;
+            }
+            
+            button {
+                margin: 0.5em;
+                height: 2.5em;
+            }
+
+            .hearts {
+                font-size: 1.5rem;
+                margin: 0.5em;
+                cursor: pointer;
+                
+                .red-heart::after {
+                    content: '\2764\FE0F';
+                }                
+            
+                .black-heart::after {
+                    content: '\1F5A4';
+                }
+
+                .red-heart:hover::after,
+                .black-heart:hover::after {
+                    content: '\1F499';
+                }
+            }
+        }
+    }
 }
-
-// .red-heart::after {
-//     content: '\2764\FE0F';
-// }
-
-// .black-heart::after {
-//     content: '\1F5A4';
-// }
-
-// .hearts {
-//     float: right;
-// }

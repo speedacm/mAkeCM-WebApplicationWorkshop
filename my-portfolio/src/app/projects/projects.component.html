@@ -12,13 +12,29 @@
             <div class="rating" *ngIf="rating.comment">
                 <div class="hearts">
                     <span *ngFor="let i of [1,2,3,4,5]">
-                        <span class="red-heart" *ngIf="rating.value >= i"></span>
-                        <span class="black-heart" *ngIf="rating.value < i"></span>
+                        <span [ngClass]="rating.value >= i ? 'red-heart' : 'black-heart'"></span>
                     </span>
                 </div>
                 <p class="comment">{{rating.comment}}</p>
             </div>
-        </div>        
+        </div>
+
+        <div class="new-rating">
+            <button *ngIf="!userRatings[project.projectId]" 
+                (click)="userRatings[project.projectId] = { comment: '', rating: 0 }">
+                Add Rating
+            </button>
+            <div class="user-rating" *ngIf="userRatings[project.projectId]">
+                <textarea [(ngModel)]="userRatings[project.projectId].comment"></textarea>
+                <div class="hearts">
+                    <span *ngFor="let i of [1,2,3,4,5]">
+                        <span [ngClass]="userRatings[project.projectId].value >= i ? 'red-heart' : 'black-heart'"
+                            (click)="userRatings[project.projectId].value = i"></span>
+                    </span>
+                </div>
+                <button (click)="submitRating(project.projectId)">Submit Rating</button>
+            </div>
+        </div>
     </div>
     
 </div>

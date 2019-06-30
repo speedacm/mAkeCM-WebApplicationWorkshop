@@ -22,7 +22,7 @@ export class DataService {
 
   // Adds a Rating to the API
   public addRating(id: number, rating: Rating): Observable<object> {
-    return this.http.post(api.baseUrl + api.addRating(id), this.options)
+    return this.http.post(api.baseUrl + api.addRating(id), rating, this.options)
       .pipe(
         catchError(this.handleError)
       );
@@ -61,7 +61,7 @@ export interface Project {
 const api = {
 
   // TODO: Replace the value READONLY with the key given to you at the beginning of the workshop
-  key: 'READONLY',
+  key: 'RCU98PA',// 'READONLY',
 
   baseUrl: 'https://caswell.dev/api/',
   loadProjects: 'projects',
