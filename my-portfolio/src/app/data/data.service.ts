@@ -46,11 +46,13 @@ export class DataService {
 }
 
 export interface Rating {
+  ratingId: number,
   value: number,
   comment: string
 }
 
 export interface Project {
+  projectId: number,
   title: string,
   description: string,
   ratings: Rating[]

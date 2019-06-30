@@ -1,10 +1,24 @@
 <div class="container">
     
     <!-- Place holders -->
-    <h1>I still need to finish this page!</h1>
+    <h1>My Project Ideas</h1>
     
-    <div *ngFor="let project of projects">
-        <p>{{project.title}}</p>
+    <div class="project" *ngFor="let project of projects">
+        <h2 class="title">{{project.title}}</h2>
+        <p class="description">{{project.description}}</p>
+        <p class="avg-rating">{{(getAverageRating(project) | number:'1.1-1') || 'N/A'}}</p>
+
+        <div *ngFor="let rating of project.ratings">
+            <div class="rating" *ngIf="rating.comment">
+                <div class="hearts">
+                    <span *ngFor="let i of [1,2,3,4,5]">
+                        <span class="red-heart" *ngIf="rating.value >= i"></span>
+                        <span class="black-heart" *ngIf="rating.value < i"></span>
+                    </span>
+                </div>
+                <p class="comment">{{rating.comment}}</p>
+            </div>
+        </div>        
     </div>
     
 </div>

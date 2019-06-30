@@ -1,0 +1,49 @@
+.project {
+    position: relative;
+    background: #f4f4ff;
+    padding: 0.5em 2em;
+    margin: 1em 0;
+    border-radius: 0.5em;
+
+    .avg-rating {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        margin: 0;
+        font-size: 1.5em;
+
+        &::after {
+            content: ' \2764\FE0F';
+        }
+    }
+
+    .rating {
+        border-top: 1px solid #444;
+        padding: 0 1em;
+
+        .hearts {
+            float: right;
+            margin-top: 0.5em;
+            
+            .red-heart::after {
+                content: '\2764\FE0F';
+            }
+
+            .black-heart::after {
+                content: '\1F5A4';
+            }
+        }
+    }
+}
+
+// .red-heart::after {
+//     content: '\2764\FE0F';
+// }
+
+// .black-heart::after {
+//     content: '\1F5A4';
+// }
+
+// .hearts {
+//     float: right;
+// }
