@@ -61,7 +61,7 @@ export interface Project {
 const api = {
 
   // TODO: Replace the value READONLY with the key given to you at the beginning of the workshop
-  key: 'RCU98PA',// 'READONLY',
+  key: 'READONLY',
 
   baseUrl: 'https://caswell.dev/api/',
   loadProjects: 'projects',
